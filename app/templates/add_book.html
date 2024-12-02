@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>도서 추가</title>
+</head>
+<body>
+    <h1>도서 추가</h1>
+    <form method="POST">
+        <label for="title">책 제목:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="author">저자:</label>
+        <input type="text" id="author" name="author" required>
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn">
+        <button type="submit">추가</button>
+    </form>
+</body>
+</html>

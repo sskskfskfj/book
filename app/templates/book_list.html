@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>도서 목록</title>
+</head>
+<body>
+    <h1>도서 목록</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} - {{ book.author }} (ISBN: {{ book.isbn }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

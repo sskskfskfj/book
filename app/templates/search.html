@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>도서 검색</title>
+</head>
+<body>
+    <h1>도서 검색</h1>
+    <form method="POST">
+        <input type="text" name="title" placeholder="책 제목을 입력하세요">
+        <button type="submit">검색</button>
+    </form>
+    {% if books %}
+        <h2>"{{ search_title }}"에 대한 검색 결과</h2>
+        <ul>
+            {% for book in books %}
+                <li>{{ book.title }} - {{ book.author }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>도서 관리 시스템</title>
+</head>
+<body>
+    <h1>도서 관리 시스템</h1>
+    <nav>
+        <a href="{{ url_for('add_book') }}">도서 추가</a>
+        <a href="{{ url_for('list_books') }}">도서 목록</a>
+        <a href="{{ url_for('search') }}">도서 검색</a>
+    </nav>
+</body>
+</html>
